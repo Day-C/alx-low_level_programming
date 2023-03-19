@@ -3,7 +3,10 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - checks random numbers
+ * Return: Always zero when (Success)
+ */
 int main(void)
 {
 	int n;
