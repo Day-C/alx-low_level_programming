@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * times_table
+ * times_table - this function writes the logit for the times table
  * Return: void returned
  */
 void times_table(void)
