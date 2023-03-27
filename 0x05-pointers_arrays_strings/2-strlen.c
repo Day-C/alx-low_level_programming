@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _srrlen -  prints the  number of characteres of a string
+ * _strlen -  prints the  number of characteres of a string
  * @s: the input string tothe function
  * Return: return void
  */
