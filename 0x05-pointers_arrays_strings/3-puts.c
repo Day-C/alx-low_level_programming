@@ -2,7 +2,7 @@
 
 /**
  * _puts - prints string followed by new line
- * @s: paramete to the function
+ * @str: paramete to the function
  * Return:  void
  */
 
