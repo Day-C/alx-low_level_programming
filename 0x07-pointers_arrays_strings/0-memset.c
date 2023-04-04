@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- *  memset - function prints characters to memory through pointer s
+ * _memset - function prints characters to memory through pointer s
  * @s: is the pointer to the address in memory where function is executed
  * @b: the character to occupy the the space
  * @n: the number of characters to print
