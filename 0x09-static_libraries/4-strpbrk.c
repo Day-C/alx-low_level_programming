@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _strpbrk - brk function
- * @S: pointer to string input
+ * @s: pointer to string input
  * @accept: acceptable char
  * Return: cahracter
  */
@@ -19,4 +19,4 @@ char *_strpbrk(char *s, char *accept)
 		s++;
 	}
 	return ('\0');
-}	
+}
