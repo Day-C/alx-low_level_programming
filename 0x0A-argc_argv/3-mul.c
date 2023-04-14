@@ -10,9 +10,14 @@ int main(int argc, char *argv[])
 	int i, j, ans;
 
 	(void) argc;
+	if (argc > 1)
+	{
 	sscanf(argv[1], "%d", &i);
 	sscanf(argv[2], "%d", &j);
 	ans = i * j;
 	printf("%d\n", ans);
+	} else {
+		printf("Error\n");
+	}
 	return (0);
 }
