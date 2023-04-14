@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - function to multiply two numbers
  * @argc: number count of arguments
@@ -7,17 +8,17 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, ans;
+	int i, j;
 
-	(void) argc;
+	/*int ans*/
 	if (argc > 1)
 	{
-	sscanf(argv[1], "%d", &i);
-	sscanf(argv[2], "%d", &j);
-	ans = i * j;
-	printf("%d\n", ans);
-	} else {
-		printf("Error\n");
+		i = atoi(argv[1]);
+		j = atoi(argv[2]);
+		/*ans = i * j;*/
+		printf("%d\n", i * j);
+		return (0);
 	}
-	return (0);
+	printf("Error\n");
+	return (1);
 }
