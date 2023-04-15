@@ -1,26 +1,26 @@
 #include "main.h"
 /**
- * _strspn - function fro string span
- * @s: the pointer to the string
- * @accept: acceptable
- * Return: unsigned  number
+ * _strspn - Entry point
+ * @s: input
+ * @accept: input
+ * Return: Always 0 (Success)
  */
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
-	int i;
+	int r;
 
 	while (*s)
 	{
-		for (i = 0; accept[i]; i++)
+		for (r = 0; accept[r]; r++)
 		{
-			if (*s == accept[i])
+			if (*s == accept[r])
 			{
 				n++;
 				break;
 			}
-			else if (accept[i + 1] == '\0')
-			return (n);
+			else if (accept[r + 1] == '\0')
+				return (n);
 		}
 		s++;
 	}
