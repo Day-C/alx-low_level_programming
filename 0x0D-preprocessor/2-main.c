@@ -1,0 +1,11 @@
+#include <stdio.h>
+/**
+ * main - finction prints the name of the file compiled from.
+ *
+ * Return: 0 for success
+ */
+int main(void)
+{
+	printf("%s\n", __FILE__);
+	return (0);
+}
