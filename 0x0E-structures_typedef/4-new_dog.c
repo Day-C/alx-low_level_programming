@@ -11,27 +11,27 @@ int stringlen(char *str);
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-        dog_t *doginfo;
-        int i, j;
+	dog_t *doginfo;
+	int i, j;
 
-        i = stringlen(name);
-        j = stringlen(owner);
+	i = stringlen(name);
+	j = stringlen(owner);
 
-        doginfo = malloc(sizeof(dog_t));
-        if (doginfo == NULL)
-                return (NULL);
-        doginfo->name = malloc(sizeof(char)*(i + 1));
-        if (doginfo->name == NULL)
-        {
-                free(doginfo);
-                return (NULL);
+	doginfo = malloc(sizeof(dog_t));
+	if (doginfo == NULL)
+		return (NULL);
+	doginfo->name = malloc(sizeof(char) * (i + 1));
+	if (doginfo->name == NULL)
+	{
+		free(doginfo);
+		return (NULL);
 	}
 
-        doginfo->owner = malloc(sizeof(char) * (j + 1));
-        if (doginfo->owner == NULL)
-        {
-                free(doginfo);
-                free(doginfo->name);
+	doginfo->owner = malloc(sizeof(char) * (j + 1));
+	if (doginfo->owner == NULL)
+	{
+		free(doginfo);
+		free(doginfo->name);
 		return (NULL);
 	}
 	_strcopy(doginfo->name, name);
@@ -43,12 +43,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 /**
  * stringlen - function checks length of string
- * @s: the string to check leng
+ * @str: the string to check leng
  * Return: return len:
  */
 int stringlen(char *str)
 {
 	int i;
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -56,11 +57,12 @@ int stringlen(char *str)
 	}
 	return (i);
 }
+
 /**
  * _strcopy - function copies string from src to dest
  * @src: source
  * @dest: destination
- * return: dest
+ * Return: dest
  */
 char *_strcopy(char *dest, char *src)
 {
