@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * strlen - function returns the length of string
+ * strglen - function returns the length of string
  * @str: string to be checked
  * Return: length of str;
  */
