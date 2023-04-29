@@ -1,44 +1,54 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+
 /**
- * string_nconcat - function to concatentate two strings
- * @s1: first string
- * @s2: second string
- * @n: number of bytes to be concatenated
- * Return: returns concatenated string
+ * strlen - function returns the length of string
+ * @str: string to be checked
+ * Return: length of str;
+ */
+int strglen(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+		;
+	return (i);
+}
+/**
+ * string_nconcat - function contatenates two strings
+ * @s1: string one
+ * @s2: string two
+ * @n: number of bytes to concat
+ * Return: concatenated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i, j, nu, m = 0;
+	char *s;
+	int nm, i, j, len;
 
-	char *str;
-
-	while (s1 && s1[nu])
-	{
-		n++;
-	}
-	while (s2 && s2[m])
-	{
-		m++;
-	}
-	if (n < m)
-		str = malloc(sizeof(char) * (nu + n + 1));
-	str = malloc(sizeof(char) * (nu + m +1));
-	if (!str)
+	nm = n;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	if (nm < 0)
 		return (NULL);
-	while (1 < nu)
-	{
-		str[i] = s1[i];
-		i++;
-	}
-	while (n < m && i < (nu + n))
-	{
-		str[i++] = s2[j++]:
-	}
-	while (n >= m && i < (nu +m))
-	{
-		str[i++] = m[j++];
-	}
-	str[i] = '\0';
-	return (Str);
+
+	if (nm >= strglen(s2))
+		nm = strglen(s2);
+
+	len = strglen(s1) + nm + 1;
+
+	s = malloc(sizeof(*s) * len);
+	if (s == NULL)
+		return (NULL);
+
+	for (i = 0; s1[i] != '\0'; i++)
+		s[i] = s1[i];
+	for (j = 0; j < nm; j++)
+		s[i + j] = s2[j];
+	s[i + j] = '\0';
+	return (s);
 }
