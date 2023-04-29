@@ -6,12 +6,12 @@
  * @d: structure to be freed
  * Return: nothing
  */
-void free_dog(dog_t *d)
+void free_dog(dog_t *dog)
 {
-	if (d)
+	if (dog)
 	{
-		free(d->name);
-		free(d->owner);
-		free(d);
+		free(dog);
+		free(dog->owner);
+		free(dog->name);
 	}
 }
