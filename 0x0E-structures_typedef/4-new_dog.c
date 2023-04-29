@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <string.h>
 #include <stdlib.h>
 char *_strcopy(char *dest, char *src);
 int stringlen(char *str);
@@ -14,8 +15,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *doginfo;
 	int i, j;
 
-	i = stringlen(name);
-	j = stringlen(owner);
+	i = strlen(name);
+	j = strlen(owner);
 
 	doginfo = malloc(sizeof(dog_t));
 	if (doginfo == NULL)
@@ -69,12 +70,14 @@ char *_strcopy(char *dest, char *src)
 	int i, j;
 
 	i = 0;
-	j = 0;
-	for (; src[i] != '\0'; i++)
-		;
-	while (i < j)
+
+	while  (src[i] != '\0')
 	{
-		dest[i] = src[i];
+		i++;
+	}
+	for (j = 0; j < i; j++)
+	{
+		dest[j] = src[j];
 	}
 	dest[i] = '\0';
 	return (dest);
