@@ -9,35 +9,20 @@ char *_elemset(char *str, char num, unsigned int n);
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char elem;
-
-
-	elem = malloc(sizeof(size)* nmemb);
+	unsigned int i;
+	void *elem;
 
 	if (nmemb == 0)
-		return (NULL);i
-	if (size ==0)
 		return (NULL);
+	if (size == 0)
+		return (NULL);
+
+	elem = malloc(size * nmemb);
 	if (elem == NULL)
-		return NULL;
-
-	elemset(elem, 0, nmemb * size);
-	return (prt);
-}
-/**
- * elemset - functio prints element to allocated space
- * @str: memory area to fill
- * @num: character to print
- * @mem: number of times to copy
- * Return: pointer to memory area
- */
-char *_elemset(char *str, char num, unsigned int n)
-{
-	unsigned int i;
-
-	for (i = 0; i < n; i++:set)
 	{
-		str[i] = num;
+		return (NULL);
 	}
-	return (str);
+	for (i = 0; i < (size * nmemb); i++)
+		*((char *)(elem) + 1) = 0;
+	return (elem);
 }
