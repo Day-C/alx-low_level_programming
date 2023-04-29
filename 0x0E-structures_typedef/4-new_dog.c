@@ -69,13 +69,12 @@ char *_strcopy(char *dest, char *src)
 	int i, j;
 
 	i = 0;
-	while (src[i] != '\0')
+	j = 0;
+	for (;src[i] != '\0'; i++)
+		;
+	while (i < j)
 	{
-		i++;
-	}
-	for (j = 0; j < i; i++)
-	{
-		dest[j] = src[j];
+		dest[i] = src[i];
 	}
 	dest[i] = '\0';
 	return (dest);
