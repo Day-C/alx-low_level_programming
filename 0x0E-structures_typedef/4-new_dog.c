@@ -70,7 +70,7 @@ char *_strcopy(char *dest, char *src)
 
 	i = 0;
 	j = 0;
-	for (;src[i] != '\0'; i++)
+	for (; src[i] != '\0'; i++)
 		;
 	while (i < j)
 	{
