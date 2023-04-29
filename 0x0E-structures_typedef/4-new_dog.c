@@ -43,23 +43,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 }
 
 /**
- * stringlen - function checks length of string
- * @str: the string to check leng
- * Return: return len:
- */
-int stringlen(char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-/**
  * _strcopy - function copies string from src to dest
  * @src: source
  * @dest: destination
