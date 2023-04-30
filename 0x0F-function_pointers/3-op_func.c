@@ -1,18 +1,22 @@
 #include "3-calc.h"
 #include <stdioh>
 
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+
 /**
  * op_add - function adds two integer inputs
  * @a: first input;
- * @second input;
+ * @b: second input;
  * Return: sum of both numbers
  */
 int op_add(int a, int b)
 {
-	int sum;
 
-	sum  = (a + b);
-	return (sum);
+	return (a + b);
 }
 
 /**
@@ -23,10 +27,7 @@ int op_add(int a, int b)
  */
 int op_sub(int a, int b)
 {
-	int sub;
-
-	sub = (a - b);
-	return (sub);
+	return (a - b);
 }
 /**
  * op_mul - function multiplies inputs
@@ -36,10 +37,7 @@ int op_sub(int a, int b)
  */
 int op_mul(int a, int b)
 {
-	int mult;
-
-	mult = (a * b);
-	return (mult);
+	return (a * b);
 }
 
 /**
@@ -50,10 +48,7 @@ int op_mul(int a, int b)
  */
 int op_div(int a, int b)
 {
-	int divi;
-
-	divi = (a * b);
-	return (divi);
+	return (a * b);
 }
 
 /**
@@ -64,8 +59,6 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	int modu;
+	return (a % b);
 
-	modu = (a % b);
-	return (modu);
 }
