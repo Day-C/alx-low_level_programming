@@ -10,7 +10,8 @@
 int main(int argc, char *argv[])
 {
 	int b, i;
-	char *arg;
+	int (*address)(int, char **) = main;
+	unsigned char arg;
 
 	if (argc != 2)
 	{
@@ -25,15 +26,18 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	arg = (char *)main;
 	for (i = 0; i < b; i++)
 	{
+		arg = *(unsigned char *)address;
+		printf("%.2x", arg);
+
 		if (i == b - 1)
-		{
-			printf("%02hhx\n", arg[i]);
-			break;
-		}
-		printf("%02hhx", arg[i]);
+			continue;
+		printf(" ");
+
+		address++;
+
 	}
+	printf("\n");
 	return (0);
 }
