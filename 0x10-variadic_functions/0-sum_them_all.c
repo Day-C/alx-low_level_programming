@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
-#include "function_pointers.h"
+#include "variadic_functions.h"
 /**
  * sum_them_all - function sums all the integer inputs
  * @n: the number of arguments
