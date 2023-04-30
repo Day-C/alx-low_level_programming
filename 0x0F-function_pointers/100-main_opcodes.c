@@ -7,7 +7,7 @@
  * @argv: array oof argumentsts
  * Return: int
  */
-int main(int argc, char argv[])
+int main(int argc, char *argv[])
 {
 	int b, i;
 	char *arg;
@@ -17,7 +17,9 @@ int main(int argc, char argv[])
 		printf("Error\n");
 		exit(1);
 	}
-	b = atio(argv[1]);
+
+	b = atoi(argv[1]);
+
 	if (b < 0)
 	{
 		printf("Error\n");
@@ -31,7 +33,7 @@ int main(int argc, char argv[])
 			printf("%02hhx\n", arg[i]);
 			break;
 		}
-		printf("%02hhx", arr[i]);
+		printf("%02hhx", arg[i]);
 	}
 	return (0);
 }
