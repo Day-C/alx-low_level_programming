@@ -20,6 +20,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptl == NULL)
 		return (ptl);
 
+	if (new_size == 0 && ptl)
+	{
+		free(ptl);
+		return (NULL);
+	}
+
 	if (!ptl)
 		return (NULL);
 	ptlo = ptl;
