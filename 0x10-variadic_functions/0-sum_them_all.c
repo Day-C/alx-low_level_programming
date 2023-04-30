@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "variadic_functions.h"
 /**
  * sum_them_all - function sums all the integer inputs
@@ -14,9 +12,6 @@ int sum_them_all(const unsigned int n, ...)
 	va_list numlist;
 
 	va_start(numlist, n);
-
-	if (n == 0)
-		return (0);
 
 	for (l = 0; l < n; l++)
 	{
