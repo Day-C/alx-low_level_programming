@@ -1,0 +1,2 @@
+more info about functions:
+
