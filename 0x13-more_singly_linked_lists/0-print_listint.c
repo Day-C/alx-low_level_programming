@@ -8,13 +8,13 @@ size_t print_listint(const listint_t *h)
 {
 	size_t cont = 0;
 	
-	if (!h)
-		return (-1);
+	
 	while (h)
 	{
 		printf("%d\n", h->n);
 		cont++;
 		h = h->next;
 	}
+	h = NULL;
 	return (cont);
 }
