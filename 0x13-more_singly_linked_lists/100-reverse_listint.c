@@ -8,13 +8,13 @@ listint_t *reverse_listint(listint_t **head)
 {
 
 	listint_t *temp;
-	int i = 0;
 
+	temp = *head;
 	if (!*head)
 		return (NULL);
 	if (*head)
 	{
 		temp = (*head)->next;
 	}
-	return (*head);
+	return (temp);
 }
