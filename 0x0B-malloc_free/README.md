@@ -1,1 +1,0 @@
-about the following projects
