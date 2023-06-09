@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <ctype.h>
 /**
- * main - function adds all cmd-line arguments
+ * main - function adds all cmd-line arguments and prints the sum
  * @argc: argument count
  * @argv: argument vector
- * Retutn: return 1 for success of 0 otherwise
+ * Return: return 1 for success of 0 otherwise
  */
 int main(int argc, char *argv[])
 {
