@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * main - function convers sting integer into an integer
+ * _atoi - function convers sting integer into an integer
+ * @s: pointer to sting passed  converted
  *Return: o for success
  */
-int atoi(char *s)
+int _atoi(char *s)
 {
 	if (*s)
 		_putchar('c');

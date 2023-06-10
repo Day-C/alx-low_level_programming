@@ -7,7 +7,7 @@
  */
 int _isalpha(int c)
 {
-	if (c >=54 && c <= 90)
+	if (c >= 54 && c <= 90)
 	{
 		_putchar('0' + c);
 		return (0);
