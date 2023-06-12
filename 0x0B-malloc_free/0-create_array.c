@@ -3,17 +3,23 @@
 #include <stdlib.h>
 
 /**
- *
- *
+ * create_array - create an arr
+ * @size: size
+ * @c: character
  * Return: character
  */
 char *create_array(unsigned int size, char c)
 {
-	char ar[1];
-	char *ptr = ar;
+	unsigned int i;
+	char *arr;
 
-	if (size == 0)
-		return (0);
-	ar[0] = c;
-	return(ptr);
+	arr =  malloc(sizeof(char) * size);
+
+	if (arr == NULL)
+		return (NULL);
+	for (i = 0; i <= size; i++)
+	{
+		arr[i] = c;
+	}
+	return (arr);
 }
