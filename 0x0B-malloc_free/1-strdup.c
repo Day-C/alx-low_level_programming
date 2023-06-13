@@ -18,7 +18,7 @@ char *_strdup(char *str)
 		return (NULL);
 	/* allocate memory */
 	length = _strlen(str);
-	ptr = malloc(sizeof(char) * length);
+	ptr = malloc(sizeof(char) + length);
 
 	/* chack if memory was allocated */
 	if (ptr == NULL)
@@ -28,14 +28,14 @@ char *_strdup(char *str)
 }
 
 /**
- * _strlen = function to check string length
+ * _strlen - function to check string length
  * @str: pointer string
  * Return: return string len
  */
 int _strlen(char *str)
 {
 	int i;
-	
+
 	i = 0;
 	while (str[i] != '\0')
 	{
