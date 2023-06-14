@@ -35,9 +35,9 @@ int _strlen(char *str)
 {
 	int i;
 
-	while (str == NULL)
+	if (str == NULL)
 	{
-		i = 0;
+		str = "";
 	}
 
 	i = 0;
