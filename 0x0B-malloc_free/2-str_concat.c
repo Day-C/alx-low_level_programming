@@ -35,8 +35,10 @@ int _strlen(char *str)
 {
 	int i;
 
-	if (str == NULL)
-		return (0);
+	while (str == NULL)
+	{
+		i = 0;
+	}
 
 	i = 0;
 	while (str[i] != '\0')
