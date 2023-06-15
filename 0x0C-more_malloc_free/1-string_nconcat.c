@@ -17,6 +17,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	if (!n)
+		return (NULL);
 		/* get the length of the first string */
 	str1_len = str_len(s1);
 		/* add length of first string and index of second sting */
