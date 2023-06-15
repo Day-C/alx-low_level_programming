@@ -9,7 +9,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *array;
 
-	if (!size)
+	if (!size || size == 0)
 		return (NULL);
 	array = malloc(sizeof(char) * size * nmemb);
 
