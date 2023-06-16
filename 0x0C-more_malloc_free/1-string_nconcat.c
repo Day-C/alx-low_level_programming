@@ -1,5 +1,4 @@
 #include "main.h"
-#include <nain.h>
 
 int str_len(char *str);
 /**
