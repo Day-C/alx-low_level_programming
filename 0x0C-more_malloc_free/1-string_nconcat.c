@@ -36,6 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		point[i] = s2[j];
 	}
+	point[i] = '\0';
 
 	return (point);
 }
