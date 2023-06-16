@@ -1,4 +1,6 @@
 #include "main.h"
+#include <nain.h>
+
 int str_len(char *str);
 /**
  * string_nconcat - function concatenates two strings to allocated memory
@@ -22,9 +24,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	str1_len = str_len(s1);
 
+
 	size = str1_len + n;
 
-	point = malloc(sizeof(char) + size + 1);
+	point = malloc(sizeof(char) + size);
 	if (point == NULL)
 		return (NULL);
 
