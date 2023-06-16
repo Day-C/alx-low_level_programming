@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * malloc_checked -  function allocates meemory usint malloc
@@ -12,7 +11,7 @@ void *malloc_checked(unsigned int b)
 
 	ptr = malloc(b);
 
-	if (!ptr)
-		return (NULL);
+	if (ptr == NULL)
+		exit(98);
 	return (ptr);
 }

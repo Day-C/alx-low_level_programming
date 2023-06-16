@@ -9,32 +9,19 @@ int _count(int min, int max);
 int *array_range(int min, int max)
 {
 	int *array;
-	int len;
+	int len, i;
 
-	len = _count(min, max);
+	if (min > max)
+		return (NULL);
+	len = max - min + 1;
 
 	array = malloc(sizeof(int) * len);
 
 	if (array == NULL)
 		return (NULL);
+	for (i = 0; i < len; i++)
+	{
+		array[i] = min + i;
+	}
 	return (array);
 }
-
-/**
- * _count -count how many vumbers are there between the min and max
- * @min: minimum
- * @max: maximum
- * Return: lenght
- */
-int _count(int min, int max)
-{
-	int i;
-
-	i = 0;
-	while (min < max)
-	{
-		i++;
-	}
-	return (i);
-}
-

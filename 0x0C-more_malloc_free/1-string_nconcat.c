@@ -12,22 +12,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int str1_len;
 	char *point;
 	unsigned int size, i, j;
-		/*check if string is NULL and return an empty string*/
+
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 	if (!n)
 		return (NULL);
-		/* get the length of the first string */
+
 	str1_len = str_len(s1);
-		/* add length of first string and index of second sting */
+
 	size = str1_len + n;
-		/* allocating memory */
+
 	point = malloc(sizeof(char) + size);
 	if (point == NULL)
 		return (NULL);
-		/* concatenating the stings */
+
 	for (i = 0; s1[i] != '\0'; i++)
 	{
 		point[i] = s1[i];
