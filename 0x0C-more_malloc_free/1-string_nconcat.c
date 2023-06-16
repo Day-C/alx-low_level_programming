@@ -52,7 +52,7 @@ int str_len(char *str)
 {
 	unsigned int i;
 
-	i = 0;
+	i = 1;
 	while (str[i] != '\0')
 	{
 		i++;
