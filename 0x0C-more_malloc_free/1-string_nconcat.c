@@ -10,7 +10,7 @@ int str_len(char *str);
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int str1_len;
+	unsigned int str1_len, str2_len;
 	char *point;
 	unsigned int size, i, j;
 
@@ -22,7 +22,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 
 	str1_len = str_len(s1);
+	str2_len = str_len(s2);
 
+	if (n >= str2_len)
+		n = str2_len;
 
 	size = str1_len + n;
 
