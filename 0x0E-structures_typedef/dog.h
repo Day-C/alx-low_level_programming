@@ -2,6 +2,7 @@
 #define DOG_H
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * struct dog - structure contains format for identifying dogs
  * @name: dogs name
