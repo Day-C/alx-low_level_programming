@@ -23,7 +23,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	/* allocate memory for name anf & fill*/
-	ptr_name = malloc(sizeof(char) +_str_len(name));
+	ptr_name = malloc(sizeof(char) + _str_len(name));
 	ptr->name = _cpy(name, ptr_name);
 
 	ptr->age = age;
@@ -33,7 +33,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	ptr->owner = _cpy(owner, ptr_owner);
 	return (ptr);
 }
-
+/**
+ * _str_len - function checks string lenght
+ * @str: string to be checked
+ * Return: lenght of sting
+ */
 int _str_len(char *str)
 {
 	int i;
@@ -45,14 +49,19 @@ int _str_len(char *str)
 	}
 	return (i);
 }
-
+/**
+ * _cpy - function copies string
+ * @source: sting to be printed
+ * @destin: destination to be copied to
+ * Return: destination;
+ */
 char *_cpy(char *source, char *destin)
 {
 	int i;
 
 	for (i = 0;  i < _str_len(source) && source[i]; i++)
 	{
-	 	destin[i] = source[i];
+		destin[i] = source[i];
 
 	}
 	destin[i] = '\0';
