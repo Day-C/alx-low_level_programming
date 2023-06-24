@@ -8,6 +8,9 @@ int str_len(const char * const s);
 void print_all(const char * const format, ...)
 {
 	int i, format_len;
+	int numb, charac;
+	double flot;
+	char *str;
 
 	va_list args;
 
@@ -18,16 +21,34 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (i < format_len)
 	{
-		if (format[i] == 'c')
-			printf("%c", va_arg(args, int));
-		else if (format[i] == 'i')
-			printf("%d", va_arg(args, int));
-		else if (format[i] == 'f')
-			printf("%f", va_arg(args, double));
-		else if (format[i] == 's')
-			printf("%s", va_arg(args, char *));
-		else
-			i++;
+		switch (format[i])
+		{
+			case 'c':
+				charac = va_arg(args, int);
+				printf("%c", charac);
+			break;
+			case  'i':
+				numb = va_arg(args, int);
+				printf("%d", numb);
+			break;
+			case 'f':
+				flot = va_arg(args, double);
+				printf("%f", flot);
+			break;
+			case 's':
+				str = va_arg(args, char *);
+				printf("%s", str);
+			break;
+			default:
+
+			break;
+		}
+		if (i < format_len - 1)
+		{
+			printf(", ");
+		}
+
+		i++;
 	}
 	printf("\n");
 }
