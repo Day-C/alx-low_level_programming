@@ -23,11 +23,11 @@ list_t *add_node(list_t **head, const char *str)
 
 	return (*head);
 }
- /**
-  * string_len - function to print the lenght of a sting
-  * #str: pointer to string
-  * Return: lenght
-  */
+/**
+ * string_len - function to print the lenght of a sting
+ * @str: pointer to string
+ * Return: lenght of string
+ */
 int string_len(const char *str)
 {
 	unsigned int i = 0;
