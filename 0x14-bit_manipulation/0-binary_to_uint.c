@@ -6,25 +6,16 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int n, bin = 0;
-	unsigned int rem, decimal, i = 0;
-	int weight = 1;
-	while (b[i] != '\0')
+	int i;
+	unsigned int n = 0;
+
+	if (!b)
+		return (0);
+	for (i = 0; b[i]; i++)
 	{
-		if (b[i] != 48 && b[i] != 49)
-		{
+		if (b[i] < '0' || b[i] > '1')
 			return (0);
-		}
-		n = n * 10 + (b[i] - 48);
-		i++;
+		n = 2 * n + (b[i] - '0');
 	}
-	bin = n;
-	while (bin != 0)
-	{
-		rem = bin % 10;
-		decimal = decimal + rem * weight;
-		weight = weight * 2;
-		bin = bin / 10;
-	}
-	return (decimal);
+	return (n);
 }
