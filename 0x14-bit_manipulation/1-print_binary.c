@@ -6,15 +6,22 @@
  */
 void print_binary(unsigned long int n)
 {
-	int bin = 1;
-	int index = 0;
+	unsigned int cur_bit;
+	int  i, count = 0;
 
-	for (; index <= 7; index++)
+	for (i = 63; i >= 0; i--)
 	{
-		if (n & bin)
+		cur_bit = n >> i;
+
+		if (cur_bit & 1)
+		{
 			_putchar('1');
-		else
+			count++;
+		}
+		else if (count)
 			_putchar('0');
-		bin >>= 1;
 	}
+	if (!count)
+		_putchar('0');
+
 }
