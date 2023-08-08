@@ -62,6 +62,6 @@ int main(int arc, char **arv)
 		dprintf(2, "Error: Can't close fd file");
 		exit(100);
 	}
-	printf("-> %i\n", res);
+
 	return (0);
 }
