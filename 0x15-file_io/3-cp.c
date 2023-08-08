@@ -13,7 +13,7 @@ int cp(char *file_from, char *file_to)
 	if (!file_from)
 		return (-1);
 	if (!file_to)
-		return (-2)
+		return (-2);
 	fd1 = open(file_from, O_RDONLY);
 	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
