@@ -10,8 +10,12 @@ int cp(char *file_from, char *file_to)
 	int cl1, cl2, fd1, fd2, w, r = 0;
 	char buf[1024];
 
+	if (!file_from)
+		return (-1);
+	if (!file_to)
+		return (-2)
 	fd1 = open(file_from, O_RDONLY);
-	fd2 = open(file_to, O_CREAT | O_WRONLY);
+	fd2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	r = read(fd1, buf, 1024);
 	if (r == -1)
