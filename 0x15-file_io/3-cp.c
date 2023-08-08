@@ -54,7 +54,7 @@ int main(int arc, char **arv)
 	}
 	if (res == -2)
 	{
-		dprintf(2, "Error: Can't write to %s\n\n", arv[2]);
+		dprintf(2, "Error: Can't write to %s\n", arv[2]);
 		exit(99);
 	}
 	if (res == -3)
