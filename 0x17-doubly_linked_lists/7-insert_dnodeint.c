@@ -3,6 +3,7 @@
  * insert_dnodeint_at_index - function add a new node at a give index
  * @h: head
  * @idx: index
+ * @n: new numbet to be added tothe list
  * Return: list
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
