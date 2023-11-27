@@ -7,7 +7,7 @@
  * @file_to: copy to
  * Return: return 0 is successful
  */
-int cpy(char *file_from, char *file_to)
+int cp(char *file_from, char *file_to)
 {
 	int fd_1, fd_2, r, w, cl_1, cl_2;
 	char buf[1024];
@@ -62,7 +62,7 @@ int main(int argc, char **argv)
 		return (-1);
 	}
 
-	res = cpy(argv[1], argv[2]);
+	res = cp(argv[1], argv[2]);
 
 	if (res == 98)
 	{
