@@ -1,7 +1,7 @@
 #include "main.h"
 #include <string.h>
 /**
- * create_file - function creates a file if not already exist 
+ * create_file - function creates a file if not already exist
  * @filename: file
  * @text_content: string to write in file
  * Return: return 1 on success otherwise -1
