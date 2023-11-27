@@ -24,7 +24,7 @@ int cp(char *file_from, char *file_to)
 		return (99);
 
 	r = read(fd_1, buf, 1024);
-	
+
 	if (r == -1)
 		return (98);
 
@@ -67,7 +67,7 @@ int main(int argc, char **argv)
 	if (res == 98)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);	
+		exit(98);
 	}
 
 	if (res == 99)
