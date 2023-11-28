@@ -10,7 +10,7 @@
 int cp(char *file_from, char *file_to)
 {
 	int fd_1, fd_2, r, w, cl_1, cl_2;
-	char buf[10024];
+	char buf[1024];
 
 	if (!file_from)
 		return (98);
@@ -22,7 +22,11 @@ int cp(char *file_from, char *file_to)
 	if (fd_2 == -1)
 		return (99);
 
-	r = read(fd_1, buf, 10024);
+	r = read(fd_1, buf, 1024);
+	while (r > 0)
+	{
+		r = read(fd_1, buf, 1024);
+	}
 
 	if (r == -1)
 		return (98);
