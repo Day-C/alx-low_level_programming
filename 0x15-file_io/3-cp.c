@@ -22,7 +22,7 @@ int cp(char *file_from, char *file_to)
 	if (fd_2 == -1)
 		return (99);
 
-	r = read(fd_1, buf, 10024);
+	r = read(fd_1, buf, 1024);
 
 	if (r == -1)
 		return (98);
