@@ -12,14 +12,11 @@ int cp(char *file_from, char *file_to)
 	int fd_1, fd_2, r, w, cl_1, cl_2;
 	char buf[1024];
 
-	if (!file_from || !file_to)
-		return (98);
-
 	fd_1 = open(file_from, O_RDONLY);
 	if (fd_1 == -1)
 		return (98);
 
-	fd_2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC);
+	fd_2 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd_2 == -1)
 		return (99);
 
