@@ -2,7 +2,7 @@
 #include "stdlib.h"
 
 /**
- * cpy - fuunction copies files content to another file
+ * cp - fuunction copies files content to another file
  * @file_from: copy from
  * @file_to: copy to
  * Return: return 0 is successful
@@ -34,11 +34,11 @@ int cp(char *file_from, char *file_to)
 	cl_2 = close(fd_2);
 	if (cl_1 == -1)
 	{
-		return (-1);
+		return (100);
 	}
 	if (cl_2 == -1)
 	{
-		return (-1);
+		return (100);
 	}
 	return (0);
 }
