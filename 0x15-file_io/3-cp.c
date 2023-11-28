@@ -10,7 +10,7 @@
 int cp(char *file_from, char *file_to)
 {
 	int fd_1, fd_2, r, w, cl_1, cl_2;
-	char buf[1024];
+	char buf[10024];
 
 	if (!file_from)
 		return (98);
