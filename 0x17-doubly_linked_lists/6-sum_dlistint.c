@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * sum_dlistint = function adds all the values of the list
+ * sum_dlistint - function adds all the values of the list
  * @head: pointer to the first node
  * Return: return sum of values on success otherwise 0
  */
