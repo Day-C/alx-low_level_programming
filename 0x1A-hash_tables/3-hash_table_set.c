@@ -9,9 +9,9 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *dict, *temp = NULL;
+	hash_node_t *dict;
 
-	if (strlen(key) == 0)
+	if (key == NULL || strlen(key) == 0)
 		return (0);
 
 	dict = malloc(sizeof(hash_node_t));
@@ -24,18 +24,14 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	strcpy(dict->value, value);
 
 	index = key_index((unsigned char *)key, 1024);
-	temp = ht->array[index];
+
 	if (ht->array[index] == NULL)
 	{
 		ht->array[index] = dict;
 	}
 	else
 	{
-		while (temp->next != NULL)
-		{
-			temp = temp->next;
-		}
-		temp->next = dict;
+		ht->array[index] = dict;
 	}
 	return (1);
 }
