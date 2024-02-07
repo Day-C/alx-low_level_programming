@@ -9,29 +9,31 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
-	hash_node_t *dict;
+	hash_node_t *node, *temp;
 
 	if (key == NULL || strlen(key) == 0)
 		return (0);
 
-	dict = malloc(sizeof(hash_node_t));
-	if (dict == NULL)
-		return (1);
-	dict->key = malloc(strlen(key) + 1);
-	dict->value = malloc(strlen(value) + 1);
+	node = malloc(sizeof(hash_node_t));
+	node->key = malloc(strlen(key) + 1);
+	node->value = malloc(strlen(value) + 1);
 
-	strcpy(dict->key, key);
-	strcpy(dict->value, value);
+	strcpy(node->key, key);
+	strcpy(node->value, value);
 
 	index = key_index((unsigned char *)key, 1024);
-
 	if (ht->array[index] == NULL)
 	{
-		ht->array[index] = dict;
+		ht->array[index] = node;
+
 	}
 	else
 	{
-		ht->array[index] = dict;
+		temp = ht->array[index];
+		node->next = temp;
+		ht->array[index] = node;
 	}
+	printf("success\n");
+	printf("[%s] =[%s]\n", ht->array[index]->key, ht->array[index]->value);
 	return (1);
 }
