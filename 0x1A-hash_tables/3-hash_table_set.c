@@ -33,7 +33,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		node->next = temp;
 		ht->array[index] = node;
 	}
-	printf("success\n");
-	printf("[%s] =[%s]\n", ht->array[index]->key, ht->array[index]->value);
 	return (1);
 }
