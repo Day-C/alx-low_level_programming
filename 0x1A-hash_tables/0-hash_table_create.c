@@ -10,13 +10,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	hash_table_t *table;
 
 	table = malloc(sizeof(hash_table_t));
-	if (!table)
-		return (NULL);
 
 	table->size = size;
-	table->array = calloc(table->size, sizeof(hash_node_t));
+	table->array = calloc(size, sizeof(hash_node_t));
 	for (i = 0; i < table->size; i++)
 		table->array[i] = NULL;
-
+	printf("%lu\n", sizeof(hash_table_t));
 	return (table);
 }
