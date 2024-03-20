@@ -1,0 +1,10 @@
+#Usage
+#make		#compile main to binary
+
+CC = gcc
+RSC = $(wildcard *.c)
+
+all: school
+
+school: $(RSC)
+	$(CC) $(RSC) -o school
