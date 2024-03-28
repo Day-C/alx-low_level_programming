@@ -2,9 +2,7 @@
 #make		#compile main to binary
 
 CC = gcc
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 
-all: school
-
-school: $(SRC)
+all: $(SRC)
 	$(CC) $(SRC) -o school
